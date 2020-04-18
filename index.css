@@ -1,0 +1,105 @@
+div, ul, li {
+    display: flex;
+}
+
+body{
+    background: #f4f3f4;
+}
+
+.emailClient{
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    padding: 0px 80px;
+}
+
+.filterLabel {
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.filterButton {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+.filterActive {
+    border: 1px solid #CFD2CF;
+    border-radius: 16px;
+    background: #E1E4EA;
+}
+
+.main{
+    display: flex;
+}
+
+.emailList {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    list-style-type: none;
+    padding: 0 80px; 
+}
+
+.emailBody {
+    display: none;
+    flex-grow: 2;
+}
+
+.emailContent {
+    flex-direction: column;
+    flex-grow: 1;
+    color: #636363;
+    padding: 5px;
+}
+
+.emailContentItem{
+    margin: 1px 0;
+}
+
+.emailContentBody{
+    flex-grow: 1;
+    margin: 10px 0;
+    max-width: inherit;
+    overflow: hidden;
+}
+
+.emailItem {
+    border: 1px solid #CFD2CF;
+    border-radius: 10px;
+    background: #f2f2f2;
+    height: 128px;
+}
+
+.avatarContainer{
+    justify-content: center;
+    width: 100px;
+}
+
+.avatar {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 25px;
+    background: #E54065;
+    color: white;
+}
+
+.itemStrong{
+    margin: 0 10px;
+}
