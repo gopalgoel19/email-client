@@ -59,7 +59,7 @@ body{
 
 .emailBody {
     /* display: none; */
-    flex-grow: 2;
+    flex-grow: 8;
     margin: 16px 8px;
     padding: 10px 0;
     border: 1px solid #CFD2CF;
