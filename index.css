@@ -4,6 +4,7 @@ div, ul, li {
 
 body{
     background: #f4f3f4;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .emailClient{
@@ -12,7 +13,6 @@ body{
 
 .header {
     display: flex;
-    width: 100%;
     padding: 0px 80px;
 }
 
@@ -43,19 +43,26 @@ body{
 
 .main{
     display: flex;
+    padding: 0 80px; 
+    height: 700px;
 }
 
 .emailList {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    /* width: 350px; */
     list-style-type: none;
-    padding: 0 80px; 
+    margin: 16px 8px;
+    padding: 0;
 }
 
 .emailBody {
-    display: none;
+    /* display: none; */
     flex-grow: 2;
+    margin: 16px 8px;
+    border: 1px solid #CFD2CF;
+    background: white;
 }
 
 .emailContent {
@@ -63,10 +70,13 @@ body{
     flex-grow: 1;
     color: #636363;
     padding: 5px;
+    width: min-content;
 }
 
 .emailContentItem{
     margin: 1px 0;
+    /* width: 100%; */
+    /* box-sizing: border-box; */
 }
 
 .emailContentBody{
@@ -74,13 +84,15 @@ body{
     margin: 10px 0;
     max-width: inherit;
     overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
 }
 
 .emailItem {
     border: 1px solid #CFD2CF;
     border-radius: 10px;
     background: #f2f2f2;
-    height: 128px;
+    height: 110px;
 }
 
 .avatarContainer{
@@ -95,11 +107,29 @@ body{
     border: 1px solid;
     justify-content: center;
     align-items: center;
-    margin: 15px 25px;
+    margin: 25px;
     background: #E54065;
     color: white;
 }
 
 .itemStrong{
     margin: 0 10px;
+}
+
+.emailBodyContent{
+    flex-direction: column;
+    flex-grow: 1;
+    width: min-content;
+    color: 636363
+}
+
+.emailBodySubject{
+    font-size: 26px;
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.emailBodyText{
+    margin: 20px 80px 20px 0;
+    overflow: scroll;
 }
