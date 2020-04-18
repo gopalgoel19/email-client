@@ -4,11 +4,12 @@ div, ul, li {
 
 body{
     background: #f4f3f4;
-    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .emailClient{
     flex-direction: column;
+    height: 100vh;
 }
 
 .header {
@@ -44,7 +45,7 @@ body{
 .main{
     display: flex;
     padding: 0 80px; 
-    height: 700px;
+    height: 800px;
 }
 
 .emailList {
@@ -55,10 +56,12 @@ body{
     list-style-type: none;
     margin: 16px 8px;
     padding: 0;
+    height: 100%;
+    overflow: scroll;
 }
 
 .emailBody {
-    /* display: none; */
+    display: none;
     flex-grow: 8;
     margin: 16px 8px;
     padding: 10px 0;
@@ -95,6 +98,7 @@ body{
     border-radius: 10px;
     background: #f2f2f2;
     height: 110px;
+    margin-bottom: 20px;
 }
 
 .avatarContainer{

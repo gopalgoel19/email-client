@@ -1,7 +1,7 @@
 init();
 
 const emailListItem = (id, from, date, subject, desc) => 
-`<li class="emailItem" id="${id}">
+`<li class="emailItem" id="${id}" onClick="renderEmailBody(${id},'${from.name[0]}','${from.email}','${date}');">
 <div class="avatarContainer">
     <div class="avatar">${from.name[0]}</div>
 </div>
@@ -35,4 +35,24 @@ async function renderEmailList(){
     const emailListRoot = document.getElementById("emailList");
     const temp = emailListHtml.join("");
     emailListRoot.innerHTML = temp;
+}
+
+const emailBodyhtml = (name,subject,time,text) =>
+`
+<div class="avatar">${name}</div>
+<div class="emailBodyContent">
+    <div class="emailBodySubject">${subject}</div>
+    <div class="emailBodyTime">${time}</div>
+    <div class="emailBodyText">${text}</div>
+</div>
+`
+
+async function renderEmailBody(id,name,subject,date) {
+    const emailBodyElement = document.getElementById("emailBody");
+    const url = `https://flipkart-email-mock.now.sh/?id=${id}`;
+    const response = await fetch(url);
+    const text = await response.text();
+    const {body} = JSON.parse(text);
+    emailBodyElement.style.display = "flex";
+    emailBodyElement.innerHTML = emailBodyhtml(name,subject,date,body);
 }
