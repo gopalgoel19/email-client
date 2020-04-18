@@ -61,7 +61,9 @@ body{
     /* display: none; */
     flex-grow: 2;
     margin: 16px 8px;
+    padding: 10px 0;
     border: 1px solid #CFD2CF;
+    border-radius: 10px;
     background: white;
 }
 
@@ -107,7 +109,7 @@ body{
     border: 1px solid;
     justify-content: center;
     align-items: center;
-    margin: 25px;
+    margin: 15px 25px;
     background: #E54065;
     color: white;
 }
@@ -126,7 +128,7 @@ body{
 .emailBodySubject{
     font-size: 26px;
     font-weight: 800;
-    margin: 30px 0;
+    margin: 15px 0;
 }
 
 .emailBodyText{
